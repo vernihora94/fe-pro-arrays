@@ -51,10 +51,11 @@ function filter(array, callback) {
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function reduce(array, callback, initialValue) {
+  let r = initialValue;
   for (let i=0; i<array.length; i++) {
-    initialValue = callback(initialValue, array[i], i, array);
+    r = callback(initialValue, array[i], i, array);
   }
-  return initialValue;
+  return r;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
