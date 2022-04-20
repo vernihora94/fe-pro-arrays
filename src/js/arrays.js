@@ -52,9 +52,9 @@ function filter(array, callback) {
 */
 function reduce(array, callback, initialValue) {
   for (let i=0; i<array.length; i++) {
-    sum = callback(initialValue, array[i], i, array);
+    initialValue = callback(initialValue, array[i], i, array);
   }
-  return sum;
+  return initialValue;
 }
 
 /* Функция принимает в себе первым аргументом массив, вторым функцию которая будет вызываться для каждого элемента массива
