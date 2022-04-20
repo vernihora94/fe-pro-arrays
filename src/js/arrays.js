@@ -51,7 +51,7 @@ function filter(array, callback) {
  Помните, что вы передаете функцию, которая ожидает 3 аргумента, текущий элемент, индекс и сам массив. Автоматическая проверка будет это учитывать.
 */
 function reduce(array, callback, initialValue) {
-  let value=initialValue;
+  let value=0;
   for (let i=0; i<array.length; i++) {
     value=callback(initialValue, array[i], i, array);
   }
